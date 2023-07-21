@@ -1,0 +1,78 @@
+:root {
+  /* --graphWidth: value will be assigned in JS; */
+  --backgroundColor: #f0f0f0;
+  --primaryColor: #f5a535;
+}
+
+/* utility class for animation */
+
+.animate {
+  animation: grow-right 0.5s linear;
+}
+
+@keyframes grow-right {
+  from {
+    width: 0px;
+  }
+  to {
+    width: var(--graphWidth);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--backgroundColor);
+}
+#countries {
+  padding: 20px;
+}
+#countries h1 {
+  color: var(--primaryColor);
+  letter-spacing: 4px;
+  font-family: Montserrat;
+}
+.wrapper {
+  padding: 12px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.315);
+}
+.wrapper button {
+  padding: 5px;
+  margin: 5px;
+  background-color: #f5a535;
+  border: none;
+  padding: 7px;
+  outline: none;
+  border-radius: 4px;
+}
+.wrapper button:hover {
+  background-color: #f5a5355d;
+  cursor: pointer;
+}
+.wrapper p {
+  text-align: center;
+  margin-top: 4px;
+}
+.container {
+  margin: 10px 0px 40px;
+  width: 80%;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  grid-template-rows: repeat(10, 1fr);
+  gap: 9px;
+  place-items: center;
+}

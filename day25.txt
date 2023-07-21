@@ -1,0 +1,46 @@
+30DaysofJavaScript: Day 25 mini project
+
+Priority Zero(0) features:
+1. Two buttons i.e population and languages
+if any btn clicked:
+Data pops up in bar graph
+if population btn clicked:
+Displays 10 most populated counties in world
+if languages btn clicked:
+Displays 10 most spoken languages in the world
+
+
+How to approach:
+1. We have the json data with all information of the countries
+2. Parse the JSON object
+3. Iterate though the parsed array, and map out the 10 most spoken language
+4. Iterate and map out the 10 most populated countries
+
+1. Make a grid layout with 3 columns:
+  1st column: Country Name /language Name 2nd column: Bar Chart (with animation)
+3rd cloumn: no of countries where the language is         spoken/population
+
+2. The mapped array of "most populated country" should be iterated and a new element "p" should be created and appended inside the 1st grid column
+
+3. The mapped array of "most spoken language" should be iterated and a new element "p" should be created and appended inside the 3rd grid column
+
+
+For the graph-display in 2nd column:
+   each time a the mapped array are iterated, another empty div will be created and appened in the 2nd column.
+   
+The width of the div will be manipulated using the keyframes animation. i.e: create a root variable with a name --graph-width,
+the variable will be used in the keyframs ...{from: ...; to: var(--graph-width)
+}
+and the value will be passed there using javascript.
+
+But How will the graph width be determined??
+
+1. Total population /Total countries : Total should have a width of 100%
+2. Width of any particular country = 100/total population * no population in 1 country
+3. Width of any particular language = 100/total languages * no of countries that speak 1 language
+
+
+
+
+
+
